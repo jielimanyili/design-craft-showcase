@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
       (function () {
-        try {
-          var query = new URLSearchParams(location.search).get("theme");
-          var stored = localStorage.getItem("theme");
-          var theme =
-            query === "dark" || query === "light"
-              ? query
-              : stored === "dark" || stored === "light"
-                ? stored
-                : window.matchMedia("(prefers-color-scheme: dark)").matches
-                  ? "dark"
-                  : "light";
-          document.documentElement.setAttribute("data-theme", theme);
-        } catch (e) {
-          document.documentElement.setAttribute("data-theme", "light");
+        var theme;
+        var query = new URLSearchParams(location.search).get("theme");
+        if (query === "dark" || query === "light") {
+          theme = query;
+        } else {
+          var stored = null;
+          try {
+            stored = localStorage.getItem("theme");
+          } catch (e) {
+            // storage unavailable (e.g. private browsing) — fall back to OS preference
+          }
+          theme =
+            stored === "dark" || stored === "light"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
         }
+        document.documentElement.setAttribute("data-theme", theme);
       })();
     </script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
