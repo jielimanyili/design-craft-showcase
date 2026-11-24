@@ -1,7 +1,10 @@
 {
   "ci": {
     "collect": {
-      "url": ["http://127.0.0.1:4173/"],
+      "url": [
+        "http://127.0.0.1:4173/",
+        "http://127.0.0.1:4173/?theme=dark"
+      ],
       "startServerCommand": "npm run preview -- --port 4173 --strictPort --host 127.0.0.1",
       "startServerReadyPattern": "Local:",
       "numberOfRuns": 3,

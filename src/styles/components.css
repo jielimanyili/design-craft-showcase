@@ -55,7 +55,7 @@
 }
 
 .btn--destructive {
-  --btn-bg: var(--color-danger);
+  --btn-bg: var(--color-destructive);
   --btn-fg: var(--color-text-inverse);
 }
 .btn--destructive:hover:not(:disabled) {

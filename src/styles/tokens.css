@@ -127,6 +127,7 @@
   --color-action: var(--indigo-600);
   --color-action-hover: var(--indigo-700);
   --color-action-active: var(--indigo-700);
+  --color-accent: var(--indigo-600);
   --color-action-subtle: var(--indigo-50);
   --color-action-border: var(--indigo-200);
 
@@ -137,6 +138,7 @@
   --color-danger-hover: var(--red-700);
   --color-danger-strong: var(--red-700);
   --color-danger-subtle: var(--red-100);
+  --color-destructive: var(--red-600);
   --color-warning: var(--amber-700);
   --color-warning-subtle: var(--amber-100);
 
@@ -160,13 +162,11 @@
   --color-border-strong: var(--gray-700);
 
   --color-text: var(--gray-100);
-  --color-text-secondary: var(--gray-400);
-  --color-text-tertiary: var(--gray-500);
+  --color-text-secondary: var(--gray-300);
+  --color-text-tertiary: var(--gray-400);
   --color-text-inverse: var(--gray-0);
 
-  --color-action: var(--indigo-500);
-  --color-action-hover: var(--indigo-400);
-  --color-action-active: var(--indigo-300);
+  --color-accent: var(--indigo-400);
   --color-action-subtle: rgba(99, 102, 241, 0.15);
   --color-action-border: rgba(129, 140, 248, 0.4);
 

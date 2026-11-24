@@ -6,13 +6,16 @@
     <script>
       (function () {
         try {
+          var query = new URLSearchParams(location.search).get("theme");
           var stored = localStorage.getItem("theme");
           var theme =
-            stored === "dark" || stored === "light"
-              ? stored
-              : window.matchMedia("(prefers-color-scheme: dark)").matches
-                ? "dark"
-                : "light";
+            query === "dark" || query === "light"
+              ? query
+              : stored === "dark" || stored === "light"
+                ? stored
+                : window.matchMedia("(prefers-color-scheme: dark)").matches
+                  ? "dark"
+                  : "light";
           document.documentElement.setAttribute("data-theme", theme);
         } catch (e) {
           document.documentElement.setAttribute("data-theme", "light");
