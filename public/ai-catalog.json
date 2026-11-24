@@ -6,7 +6,7 @@
   },
   "entries": [
     {
-      "identifier": "urn:air:jieli.dev:strata-design-guidance",
+      "identifier": "urn:air:design-craft-showcase.vercel.app:strata-design-guidance",
       "displayName": "Strata Design Guidance",
       "type": "application/mcp-server-card+json",
       "description": "Agent-usable design guidance for the Strata design system — design tokens, composition rules, and machine-readable evaluation criteria an agent can query while building accessible, on-brand UI.",
@@ -19,7 +19,7 @@
       "capabilities": ["design-tokens", "design-guidance", "evaluation"],
       "tags": ["design-system", "design-tokens", "accessibility", "agents"],
       "trustManifest": {
-        "identity": "https://jieli.dev",
+        "identity": "https://design-craft-showcase.vercel.app",
         "identityType": "https"
       }
     }

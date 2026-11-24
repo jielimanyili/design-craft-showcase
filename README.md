@@ -2,6 +2,8 @@
 
 A small, hand-built portfolio piece that makes design craft *visible*: design tokens, typography, density, motion, and the states beyond the happy path. Built to be reviewed in a browser and deployable to Vercel in minutes.
 
+**Live:** https://design-craft-showcase.vercel.app · **Repo:** https://github.com/jielimanyili/design-craft-showcase
+
 ## Why this exists
 
 A design-systems lead role asks for two things a resume can't show: *exceptional visual and interaction taste*, and *judgment you can encode as reusable patterns*. This repo is that evidence — no UI framework, just a token system, disciplined CSS, and intent.
@@ -35,9 +37,9 @@ Vercel is pre-configured (`vercel.json`). `npm run build` emits `dist/`.
 
 ## Performance in CI
 
-Lighthouse CI gates four categories on every push/PR:
+Lighthouse CI gates four categories on every push/PR, in **both light and dark mode**:
 
-- **`lighthouserc.json`** — asserts performance ≥ 0.95, accessibility = 1, best-practices ≥ 0.95, SEO = 1, plus LCP ≤ 2500ms and CLS ≤ 0.1.
+- **`lighthouserc.json`** — asserts performance ≥ 0.95, accessibility = 1, best-practices ≥ 0.95, SEO = 1, plus LCP ≤ 2500ms and CLS ≤ 0.1, against `…/` and `…/?theme=dark`.
 - **`.github/workflows/performance.yml`** — runs `build` → `lhci autorun`.
 - Uploads each run to temporary public storage so a report URL is printed in the CI log.
 
