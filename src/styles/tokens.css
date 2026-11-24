@@ -35,14 +35,18 @@
 
   /* Color · status */
   --green-100: #dcfce7;
+  --green-300: #86efac;
   --green-400: #4ade80;
   --green-600: #16a34a;
   --green-700: #15803d;
   --green-800: #166534;
   --red-100: #fee2e2;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
   --red-600: #dc2626;
   --red-700: #b91c1c;
   --amber-100: #fef3c7;
+  --amber-400: #fbbf24;
   --amber-700: #b45309;
 
   /* Typography · families */
@@ -107,6 +111,8 @@
 /* ---- Tier 2 · Semantic ---- */
 
 :root {
+  color-scheme: light;
+
   --color-bg: var(--gray-50);
   --color-surface: var(--gray-0);
   --color-surface-sunken: var(--gray-100);
@@ -120,18 +126,64 @@
 
   --color-action: var(--indigo-600);
   --color-action-hover: var(--indigo-700);
+  --color-action-active: var(--indigo-700);
   --color-action-subtle: var(--indigo-50);
   --color-action-border: var(--indigo-200);
 
   --color-success: var(--green-700);
+  --color-success-strong: var(--green-800);
   --color-success-subtle: var(--green-100);
   --color-danger: var(--red-600);
   --color-danger-hover: var(--red-700);
+  --color-danger-strong: var(--red-700);
   --color-danger-subtle: var(--red-100);
   --color-warning: var(--amber-700);
   --color-warning-subtle: var(--amber-100);
 
+  --color-selection: var(--indigo-200);
+  --color-skeleton: var(--gray-200);
+  --color-nav: rgba(250, 250, 250, 0.85);
+  --color-toast-bg: var(--gray-900);
+
   --focus-ring: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-action);
+}
+
+/* ---- Dark theme — same roles, different values ---- */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #0e0e11;
+  --color-surface: var(--gray-900);
+  --color-surface-sunken: #242428;
+  --color-border: #2a2a30;
+  --color-border-strong: var(--gray-700);
+
+  --color-text: var(--gray-100);
+  --color-text-secondary: var(--gray-400);
+  --color-text-tertiary: var(--gray-500);
+  --color-text-inverse: var(--gray-0);
+
+  --color-action: var(--indigo-500);
+  --color-action-hover: var(--indigo-400);
+  --color-action-active: var(--indigo-300);
+  --color-action-subtle: rgba(99, 102, 241, 0.15);
+  --color-action-border: rgba(129, 140, 248, 0.4);
+
+  --color-success: var(--green-400);
+  --color-success-strong: var(--green-300);
+  --color-success-subtle: rgba(74, 222, 128, 0.14);
+  --color-danger: var(--red-400);
+  --color-danger-hover: var(--red-300);
+  --color-danger-strong: var(--red-300);
+  --color-danger-subtle: rgba(248, 113, 113, 0.15);
+  --color-warning: var(--amber-400);
+  --color-warning-subtle: rgba(251, 191, 36, 0.15);
+
+  --color-selection: rgba(99, 102, 241, 0.35);
+  --color-skeleton: #2e2e34;
+  --color-nav: rgba(14, 14, 17, 0.82);
+  --color-toast-bg: var(--gray-800);
 }
 
 /* ---- Tier 3 · Component ---- */

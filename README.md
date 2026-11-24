@@ -56,5 +56,6 @@ The ARD entry describes the Strata design system's agent-usable design guidance 
 ## Design notes
 
 - One accent color (indigo), a disciplined neutral ramp, and tabular numerals for all data.
+- Full light/dark theming via `data-theme` — only the semantic tier flips, primitives stay fixed; defaults to the OS preference and persists your choice.
 - Focus is keyboard-visible everywhere; `prefers-reduced-motion` collapses every transition.
 - Forced states (`.is-hover-demo`, `.is-active-demo`, `.is-focus-demo`) make interaction states reviewable from a static screenshot.

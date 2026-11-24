@@ -1,4 +1,5 @@
 import { Section } from "./components/Section";
+import { ThemeToggle } from "./components/ThemeToggle";
 import { FoundationsDemo } from "./components/FoundationsDemo";
 import { TypographyDemo } from "./components/TypographyDemo";
 import { DensityDemo } from "./components/DensityDemo";
@@ -14,11 +15,14 @@ export default function App() {
             <a className="nav__brand" href="#top">
               Design Craft
             </a>
-            <div className="nav__links">
-              <a href="#typography">Type</a>
-              <a href="#density">Density</a>
-              <a href="#motion">Motion</a>
-              <a href="#states">States</a>
+            <div className="nav__right">
+              <div className="nav__links">
+                <a href="#typography">Type</a>
+                <a href="#density">Density</a>
+                <a href="#motion">Motion</a>
+                <a href="#states">States</a>
+              </div>
+              <ThemeToggle />
             </div>
           </div>
         </nav>

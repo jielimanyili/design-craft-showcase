@@ -133,7 +133,7 @@
 }
 
 .banner--error {
-  border-color: var(--red-600);
+  border-color: var(--color-danger);
   background: var(--color-danger-subtle);
 }
 

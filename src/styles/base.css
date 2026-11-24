@@ -45,7 +45,7 @@ button {
 }
 
 ::selection {
-  background: var(--indigo-200);
+  background: var(--color-selection);
 }
 
 .container {

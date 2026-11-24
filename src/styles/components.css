@@ -87,7 +87,7 @@
   --btn-bg: var(--color-action-hover);
 }
 .is-active-demo {
-  --btn-bg: var(--indigo-700);
+  --btn-bg: var(--color-action-active);
   transform: translateY(1px) scale(0.985);
 }
 .is-focus-demo {
@@ -118,7 +118,7 @@
 .skeleton {
   position: relative;
   overflow: hidden;
-  background: var(--gray-200);
+  background: var(--color-skeleton);
   border-radius: var(--radius-sm);
 }
 
@@ -168,12 +168,12 @@
 
 .badge--success {
   background: var(--color-success-subtle);
-  color: var(--green-800);
+  color: var(--color-success-strong);
 }
 
 .badge--danger {
   background: var(--color-danger-subtle);
-  color: var(--red-700);
+  color: var(--color-danger-strong);
 }
 
 /* ================================ Toast ================================ */
@@ -184,7 +184,7 @@
   gap: var(--space-2);
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-md);
-  background: var(--gray-900);
+  background: var(--color-toast-bg);
   color: var(--color-text-inverse);
   font-size: var(--text-sm);
   font-weight: var(--weight-medium);
