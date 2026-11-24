@@ -3,29 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      (function () {
-        var theme;
-        var query = new URLSearchParams(location.search).get("theme");
-        if (query === "dark" || query === "light") {
-          theme = query;
-        } else {
-          var stored = null;
-          try {
-            stored = localStorage.getItem("theme");
-          } catch (e) {
-            // storage unavailable (e.g. private browsing) — fall back to OS preference
-          }
-          theme =
-            stored === "dark" || stored === "light"
-              ? stored
-              : window.matchMedia("(prefers-color-scheme: dark)").matches
-                ? "dark"
-                : "light";
-        }
-        document.documentElement.setAttribute("data-theme", theme);
-      })();
-    </script>
+    <script src="/theme.js"></script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="description" content="A hand-built design-craft showcase: tokens, typography, density, motion, and states beyond the happy path." />
     <title>Design Craft — Tokens · Type · Density · Motion · States</title>
