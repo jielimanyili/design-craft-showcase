@@ -1,0 +1,159 @@
+/* ================================ Text field ================================ */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.field__label {
+  font-size: var(--text-label);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.field__control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--control-h);
+  padding: 0 var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--control-radius);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.field__control:focus-within {
+  border-color: var(--color-action);
+  box-shadow: 0 0 0 3px var(--color-action-subtle);
+}
+
+.field__control--disabled {
+  background: var(--color-surface-sunken);
+  opacity: 0.7;
+}
+
+.field__control input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font-size: var(--text-body);
+  color: var(--color-text);
+}
+
+.field__control input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.field__control input:disabled {
+  cursor: not-allowed;
+  color: var(--color-text-tertiary);
+}
+
+.field__affix {
+  display: inline-flex;
+  color: var(--color-text-tertiary);
+}
+
+.field__message {
+  font-size: var(--text-caption);
+  color: var(--color-text-tertiary);
+}
+
+.field__message--error {
+  color: var(--color-danger);
+}
+
+.field__message--success {
+  color: var(--color-success);
+}
+
+.field--error .field__control {
+  border-color: var(--color-danger);
+}
+
+.field--error .field__control:focus-within {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 3px var(--color-danger-subtle);
+}
+
+.field--success .field__control {
+  border-color: var(--color-success);
+}
+
+/* ================================ State card & banner ================================ */
+
+.state-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-8);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-sunken);
+  text-align: left;
+}
+
+.state-card__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.state-card__title {
+  font-size: var(--text-heading);
+  font-weight: var(--weight-semibold);
+}
+
+.state-card__copy {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  max-width: 34ch;
+}
+
+.banner {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.banner--error {
+  border-color: var(--red-600);
+  background: var(--color-danger-subtle);
+}
+
+.banner__icon {
+  display: inline-flex;
+  color: var(--color-danger);
+  flex: none;
+}
+
+.banner__title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.banner__copy {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+}
+
+.banner__actions {
+  margin-top: var(--space-3);
+}

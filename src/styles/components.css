@@ -1,0 +1,209 @@
+/* ================================ Button ================================ */
+
+.btn {
+  --btn-bg: var(--color-action);
+  --btn-fg: var(--color-text-inverse);
+  --btn-border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: var(--control-h);
+  padding: 0 var(--space-4);
+  border: 1px solid var(--btn-border);
+  border-radius: var(--control-radius);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.btn--primary {
+  --btn-bg: var(--color-action);
+  --btn-fg: var(--color-text-inverse);
+}
+.btn--primary:hover:not(:disabled) {
+  --btn-bg: var(--color-action-hover);
+}
+
+.btn--secondary {
+  --btn-bg: var(--color-surface);
+  --btn-fg: var(--color-text);
+  --btn-border: var(--color-border-strong);
+}
+.btn--secondary:hover:not(:disabled) {
+  --btn-bg: var(--color-surface-sunken);
+}
+
+.btn--ghost {
+  --btn-bg: transparent;
+  --btn-fg: var(--color-text);
+}
+.btn--ghost:hover:not(:disabled) {
+  --btn-bg: var(--color-surface-sunken);
+}
+
+.btn--destructive {
+  --btn-bg: var(--color-danger);
+  --btn-fg: var(--color-text-inverse);
+}
+.btn--destructive:hover:not(:disabled) {
+  --btn-bg: var(--color-danger-hover);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px) scale(0.985);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn--sm {
+  height: var(--control-h-sm);
+  padding: 0 var(--space-3);
+  font-size: var(--text-label);
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Forced states — make interaction states reviewable in a static screenshot */
+.is-hover-demo {
+  --btn-bg: var(--color-action-hover);
+}
+.is-active-demo {
+  --btn-bg: var(--indigo-700);
+  transform: translateY(1px) scale(0.985);
+}
+.is-focus-demo {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* ================================ Spinner ================================ */
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* ================================ Skeleton ================================ */
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--gray-200);
+  border-radius: var(--radius-sm);
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton--avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  flex: none;
+}
+
+.skeleton--line {
+  height: 0.875rem;
+}
+
+/* ================================ Badge ================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 1.375rem;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+}
+
+.badge--neutral {
+  background: var(--color-surface-sunken);
+  color: var(--color-text-secondary);
+}
+
+.badge--success {
+  background: var(--color-success-subtle);
+  color: var(--green-800);
+}
+
+.badge--danger {
+  background: var(--color-danger-subtle);
+  color: var(--red-700);
+}
+
+/* ================================ Toast ================================ */
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--gray-900);
+  color: var(--color-text-inverse);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  box-shadow: var(--shadow-lg);
+  animation: toast-in var(--dur-slow) var(--ease-out);
+}
+
+.toast__icon {
+  display: inline-flex;
+  color: var(--green-400);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

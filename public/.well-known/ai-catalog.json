@@ -1,0 +1,27 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Jie Li",
+    "documentationUrl": "https://github.com/jielimanyili"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:jieli.dev:strata-design-guidance",
+      "displayName": "Strata Design Guidance",
+      "type": "application/mcp-server-card+json",
+      "description": "Agent-usable design guidance for the Strata design system — design tokens, composition rules, and machine-readable evaluation criteria an agent can query while building accessible, on-brand UI.",
+      "url": "https://github.com/jielimanyili/strata-design-system",
+      "representativeQueries": [
+        "How should I use spacing tokens in a data-dense table?",
+        "Which token is the primary action color?",
+        "What accessibility checks must a form input pass?"
+      ],
+      "capabilities": ["design-tokens", "design-guidance", "evaluation"],
+      "tags": ["design-system", "design-tokens", "accessibility", "agents"],
+      "trustManifest": {
+        "identity": "https://jieli.dev",
+        "identityType": "https"
+      }
+    }
+  ]
+}

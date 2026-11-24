@@ -1,0 +1,16 @@
+# Design Craft
+
+A hand-built design-craft showcase: design tokens, typography, density, motion, and the states beyond the happy path. No UI framework — just a token system and intent.
+
+## What's in it
+
+- [Foundations](./#foundations) — three-tier design tokens (primitive → semantic → component)
+- [Typography](./#typography) — type scale, tabular numerals, hierarchy in context
+- [Density](./#density) — data-dense UI with a systematic density toggle
+- [Motion](./#motion) — staggered entrance, sliding indicator, accordion, toast (reduced-motion aware)
+- [States](./#states) — loading, empty, error, disabled, and focus states
+
+## Notes
+
+- Stack: Vite 5 · React 19 · TypeScript · hand-written CSS tokens.
+- Source: https://github.com/jielimanyili/design-craft-showcase
